@@ -3,12 +3,16 @@ package game_tools;
 import java.awt.Dimension;
 
 public class Game {
-	public GameFrame frame;
+	GameFrame frame;
 	public int screenWidth;
 	public int screenHeight;
 
 	public Game() {
 		frame = new GameFrame();
+	}
+	
+	public Game(String title) {
+		frame = new GameFrame(title);
 	}
 
 	public void start() {
@@ -37,5 +41,8 @@ public class Game {
 
 	public void addController(Controller controller) {
 		frame.addController(controller);
+	}
+	public GameFrame getFrame() {
+		return this.frame;
 	}
 }

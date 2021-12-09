@@ -5,12 +5,13 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 @SuppressWarnings("serial")
-class GameFrame extends JFrame implements KeyListener, MouseListener {
+class GameFrame extends JFrame implements KeyListener, MouseListener, MouseMotionListener {
 	public Controller controller;
 
 	public static final int DEFAULT_SIZE = 500;
@@ -24,7 +25,11 @@ class GameFrame extends JFrame implements KeyListener, MouseListener {
 		this.setSize(DEFAULT_SIZE, DEFAULT_SIZE);
 		this.add(gamePanel);
 	}
-
+	
+	public GameFrame(String title) {
+		this();
+		this.setTitle(title);
+	}
 	/**
 	 * 
 	 * @param gamePanel
@@ -129,5 +134,15 @@ class GameFrame extends JFrame implements KeyListener, MouseListener {
 	@Override
 	public void mouseExited(MouseEvent e) {
 		controller.mouseExited(e);
+	}
+
+	@Override
+	public void mouseDragged(MouseEvent e) {
+		controller.mouseDragged(e);
+	}
+
+	@Override
+	public void mouseMoved(MouseEvent e) {
+		controller.mouseMoved(e);
 	}
 }

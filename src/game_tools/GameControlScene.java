@@ -5,7 +5,7 @@ import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-public interface GameControlScene extends  GameScene, Controller {
+public interface GameControlScene extends GameScene, Controller {
 
 	@Override
 	default void keyTyped(KeyEvent e) {
@@ -33,6 +33,13 @@ public interface GameControlScene extends  GameScene, Controller {
 
 	@Override
 	default void mouseExited(MouseEvent e) {
+	}
 
+	@Override
+	default void mouseDragged(MouseEvent e) {
+	}
+
+	@Override
+	default void mouseMoved(MouseEvent e) {
 	}
 }

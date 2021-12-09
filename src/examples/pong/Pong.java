@@ -23,6 +23,7 @@ public class Pong implements GameControlScene{
 	}
 	@Override
 	public void draw(Graphics g) {
+		// Create a Ball Class with x, and y
 		g.setColor(Color.BLACK);
 		g.fillRect(0, 0, 500, 500);
 		g.setColor(Color.WHITE);

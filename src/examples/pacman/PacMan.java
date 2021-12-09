@@ -3,6 +3,7 @@ package examples.pacman;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
+import java.awt.event.MouseEvent;
 
 import game_tools.Game;
 import game_tools.GameControlScene;
@@ -54,5 +55,6 @@ public class PacMan implements GameScene, GameControlScene {
 			gameFrame.setScene(gameOverScene);
 		}
 	}
+
 
 }
