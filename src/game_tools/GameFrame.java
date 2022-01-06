@@ -11,7 +11,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 @SuppressWarnings("serial")
-class GameFrame extends JFrame implements KeyListener, MouseListener, MouseMotionListener {
+public class GameFrame extends JFrame implements KeyListener, MouseListener, MouseMotionListener {
 	public Controller controller;
 
 	public static final int DEFAULT_SIZE = 500;
@@ -54,6 +54,10 @@ class GameFrame extends JFrame implements KeyListener, MouseListener, MouseMotio
 		super.setSize(d);
 	}
 
+	public void setResizable(boolean b) {
+		super.setResizable(b);
+	}
+	
 	@Override
 	public void keyTyped(KeyEvent e) {
 		controller.keyTyped(e);
