@@ -8,12 +8,12 @@ import game_tools.GameControlScene;
 
 public class Tetris implements GameControlScene {
 
-	Game frame = new Game();
+	Game game = new Game();
 	Level2 level2 = new Level2();
 
 	Tetris() {
-		frame.setScene(this);
-		frame.start();
+		game.setScene(this);
+		game.start();
 	}
 
 	@Override
@@ -27,7 +27,7 @@ public class Tetris implements GameControlScene {
 	@Override
 	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_ENTER) {
-			frame.setScene(level2);
+			game.setScene(level2);
 
 		}
 

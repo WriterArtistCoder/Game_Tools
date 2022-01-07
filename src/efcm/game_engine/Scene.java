@@ -13,23 +13,28 @@ public class Scene {
 
 	public static final long FRAME_RATE = 200;
 	protected ArrayList<Sprite> sprites;
+
+	private SlowTaskManager manager;
 	
 	private Image image;
 	public final int level;
 	public final int scene;
 	
 	public Scene(int level, int scene) {
+		super();
 		try {
 			this.image = ImageIO.read(new File("src/efcm/assets/scenes/l"+level+"s"+scene+".png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		
+		this.manager = new SlowTaskManager();
 		this.level = level;
 		this.scene = scene;
 	}
 
 	public void render(Graphics g, ImageObserver observer) {
+		manager.doTasks();
 		g.drawImage(image, 0, 0, Runner.SCENE_WIDTH_PXL*Runner.SCENE_PXL_SCALE, Runner.SCENE_HEIGHT_PXL*Runner.SCENE_PXL_SCALE, observer);
 	}
 

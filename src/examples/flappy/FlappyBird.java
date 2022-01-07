@@ -14,7 +14,7 @@ public class FlappyBird implements GameControlScene {
 	float y = 0;
 	int pipeX = 500;
 	float velocity = 1;
-	float gravity = 1;
+	public static final int GRAVITY = 1;
 	Game game = new Game();
 	Animation animation;
 
@@ -40,7 +40,7 @@ public class FlappyBird implements GameControlScene {
 		// physics
 		pipeX -= 2;
 		y -= velocity;
-		velocity -= gravity;
+		velocity -= GRAVITY;
 
 	}
 
