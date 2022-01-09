@@ -9,6 +9,9 @@ public abstract class Sprite {
 	/** Actions the sprite can perform */
 	protected Action[] actions;
 
+	/** The SlowTaskManager */
+	private SlowTaskManager manager;
+
 	/** The source sprite sheet */
 	protected Image image;
 
@@ -23,6 +26,7 @@ public abstract class Sprite {
 	public void render(Graphics g, ImageObserver observer) {
 		g.drawImage(image, x * Runner.SCENE_PXL_SCALE, y * Runner.SCENE_PXL_SCALE, (x + width) * Runner.SCENE_PXL_SCALE,
 				(y + height) * Runner.SCENE_PXL_SCALE, width * frame, 0, width * (frame + 1), height, observer);
+		manager.doTasks();
 	}
 
 	public abstract void actOn(Action action, Sprite reciever);
