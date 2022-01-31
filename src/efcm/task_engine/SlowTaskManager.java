@@ -4,11 +4,13 @@ import java.util.ArrayList;
 
 public class SlowTaskManager extends ArrayList<SlowTask> {
     public void doTasks() {
-        this.forEach(st->{
-            st.poll().run();
-            if (st.isEmpty()) {
-                this.remove(st);
+        for (int i = 0; i < this.size(); i++) {
+            SlowTask st = this.get(i);
+            if (st.hasNext()) {
+                st.next();
+            } else {
+                this.remove(i);
             }
-        });
+        }
     }
 }

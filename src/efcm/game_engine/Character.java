@@ -14,6 +14,8 @@ public class Character extends Sprite {
 	protected Image image; // The source sprite sheet
 
 	public Character(String id) {
+		super();
+		
 		try {
 			setImage(ImageIO.read(new File("src/efcm/assets/chars/"+id+".png")));
 		} catch (IOException e) {

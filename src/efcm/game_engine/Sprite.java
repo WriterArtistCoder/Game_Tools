@@ -4,6 +4,8 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.image.ImageObserver;
 
+import efcm.task_engine.SlowTaskManager;
+
 public abstract class Sprite {
 
 	/** Actions the sprite can perform */
@@ -22,6 +24,10 @@ public abstract class Sprite {
 	private int y;
 	private int width;
 	private int height;
+	
+	public Sprite() {
+		this.manager = new SlowTaskManager();
+	}
 
 	public void render(Graphics g, ImageObserver observer) {
 		g.drawImage(image, x * Runner.SCENE_PXL_SCALE, y * Runner.SCENE_PXL_SCALE, (x + width) * Runner.SCENE_PXL_SCALE,

@@ -9,6 +9,8 @@ import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
 
+import efcm.task_engine.SlowTaskManager;
+
 public class Scene {
 
 	public static final long FRAME_RATE = 200;
@@ -21,7 +23,6 @@ public class Scene {
 	public final int scene;
 	
 	public Scene(int level, int scene) {
-		super();
 		try {
 			this.image = ImageIO.read(new File("src/efcm/assets/scenes/l"+level+"s"+scene+".png"));
 		} catch (IOException e) {
