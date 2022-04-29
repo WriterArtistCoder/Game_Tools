@@ -1,6 +1,6 @@
 # Escape from Canamexico
 *This README only applies to the `efcm` package and its contents. The rest does not have a README, and in fact has little documentation at all, at the time of writing.*
-**Escape from Canamexico** (**EFCM**) is a pixel art prison escape adventure video game set in 2040. <span style="color:#ff4d59;">Canada</span>, <span style="color:#5480f7;">the United States</span>, and <span style="color:#45ad49;">Mexico</span> have united to form **<span style="color:#ff4d59;">Can</span><span style="color:#5480f7;">am</span><span style="color:#45ad49;">exico</span>**, officially the **North American Union** (**NAU**).
+**Escape from Canamexico** (**EFCM**) is a pixel art prison escape adventure video game set in 2040. <span style="color:#ff4d59;">Canada</span>, <span style="color:#5480f7;">the United States</span>, and <span style="color:#45ad49;">Mexico</span> united to form **<span style="color:#ff4d59;">Can</span><span style="color:#5480f7;">am</span><span style="color:#45ad49;">exico</span>** in 2025, officially the **North American Union** (**NAU**).
 
 Little foresight and planning left the first NAU a mess, but a dictator rose from the chaos to unite the countries once again into a second NAU which was ruled with an iron fist.
 
